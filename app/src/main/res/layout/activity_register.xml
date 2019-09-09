@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_background"
+    tools:context=".RegisterActivity"
+    android:focusable="true"
+    android:id="@+id/scroll"
+    android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/register_linlay_backgrd"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Create a new account"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etFName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/etLName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etAddress1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:hint="Address"
+                android:inputType="textPostalAddress" />
+
+            <EditText
+                android:id="@+id/etAddress2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:hint="Address"
+                android:inputType="textPostalAddress" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/Countries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" />
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ems="10"
+                    android:hint="City"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone number"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etRePassword"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:hint="Re-enter your password"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_button"
+                android:text="Sign Up"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+</ScrollView>

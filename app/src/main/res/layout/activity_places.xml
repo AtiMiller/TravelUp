@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacesActivity"
+    android:id="@+id/layout_places"
+    android:orientation="vertical">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="@color/colorPrimary"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/summer_lay"
+        android:orientation="vertical"
+        android:background="@drawable/summer_gradient_list">
+
+
+            <!--    SlidingUp Layout-->
+
+        <fragment
+            android:id="@+id/helpFrag"
+            android:name="com.example.travelup.HelpFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_help" />
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:umanoDragView="@id/dragview"
+                app:umanoPanelHeight="35dp"
+                app:umanoOverlay="false"
+                app:umanoParallaxOffset="100dp"
+                app:umanoShadowHeight="4dp"
+                app:umanoScrollableView="@id/scrollview"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+<!--                Places ReciclerView-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recyclerView"
+                    android:orientation="horizontal">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+<!--                Filter Layout-->
+
+                <LinearLayout
+                    android:background="@drawable/filter_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dragview"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:orientation="vertical">
+
+                    <!--            title LinearLayout-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:drawableTop="@drawable/arrow_drop_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="Filter"/>
+
+                        <View
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                    <!--            ScrollView Under title LinearLayout-->
+
+                    <ScrollView
+                        android:id="@+id/scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!--                        Select Season TextView-->
+
+                            <TextView
+                                android:paddingTop="20dp"
+                                android:paddingBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:text="Select season"
+                                android:textSize="17sp"
+                                android:textColor="#000000"/>
+
+                            <!--                        Seasons CheckBox-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Spring"
+                                    android:id="@+id/check_spring"/>
+
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Summer"
+                                    android:id="@+id/check_summer"/>
+
+                                <CheckBox
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Autumn"
+                                    android:id="@+id/check_autumn"/>
+
+                                <CheckBox
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Winter"
+                                    android:id="@+id/check_winter"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:background="@color/colorPrimary"/>
+
+                            <!--                        Select Continent TextView-->
+
+                            <TextView
+                                android:paddingBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:text="Select continent"
+                                android:textSize="17sp"
+                                android:textColor="#000000"/>
+
+                            <!--                        Select Continent CheckBox-->
+
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingLeft="10dp">
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Africa"
+                                        android:id="@+id/check_africa"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Asia"
+                                        android:id="@+id/check_asia"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Europe"
+                                        android:id="@+id/check_europe"/>
+
+                                </TableRow>
+
+                                <TableRow>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="North America"
+                                        android:id="@+id/check_north_america"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="South America"
+                                        android:id="@+id/check_south_america"/>
+
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Australia"
+                                        android:id="@+id/check_austria_oceania"/>
+
+                                </TableRow>
+
+                            </TableLayout>
+
+                            <View
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:background="@color/colorPrimary"/>
+
+                            <Button
+                                android:id="@+id/btnApply"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/login_button"
+                                android:layout_marginStart="120dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_marginEnd="120dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:text="Apply" />
+
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+
+            </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
